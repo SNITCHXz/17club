@@ -1,0 +1,86 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: #121212; color: #fff; min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+header {
+  background: #1f1f1f; padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo {
+  font-weight: 700; font-size: 1.6rem; color: #ff5722;
+}
+.menu {
+  list-style: none; display: flex; gap: 25px;
+}
+.menu li a {
+  text-decoration: none; color: #bbb;
+  font-weight: 600; transition: color 0.3s;
+}
+.menu li a:hover {
+  color: #ff5722; cursor: pointer;
+}
+main { flex-grow: 1; padding: 30px; }
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+  gap: 25px;
+}
+.game-card {
+  background: #222; border-radius: 15px; overflow: hidden;
+  box-shadow: 0 0 10px #000; text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff5722;
+}
+.game-card img {
+  width: 100%; height: 120px; object-fit: cover;
+}
+.game-card h3 {
+  margin: 10px 0 15px; font-weight: 700; color: #ff5722;
+}
+footer {
+  background: #1f1f1f; padding: 20px;
+  text-align: center; font-size: 0.9rem; color: #777;
+}
+.modal {
+  display: none; position: fixed; z-index: 999;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  justify-content: center; align-items: center;
+}
+.modal-content {
+  background: #222; padding: 25px 35px;
+  border-radius: 12px; width: 320px;
+  position: relative;
+  box-shadow: 0 0 20px #ff5722;
+}
+.close {
+  position: absolute; top: 12px; right: 15px;
+  font-size: 1.6rem; cursor: pointer; color: #ff5722;
+}
+.modal-content h2 {
+  margin-bottom: 20px; text-align: center; color: #ff5722;
+}
+.modal-content input {
+  width: 100%; padding: 12px; margin: 10px 0;
+  border-radius: 8px; border: none; font-size: 1rem;
+}
+.modal-content button {
+  width: 100%; padding: 12px; background: #ff5722;
+  border: none; border-radius: 8px;
+  font-weight: 700; color: #fff;
+  cursor: pointer; font-size: 1.1rem;
+}
+.modal-content button:hover {
+  background: #e64a19;
+}
